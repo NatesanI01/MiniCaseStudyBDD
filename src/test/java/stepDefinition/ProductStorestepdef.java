@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -12,8 +14,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -117,6 +121,13 @@ public class ProductStorestepdef {
 		Assert.assertEquals(driver.findElement(By.xpath("(//h2)[3]")).getText(), "Thank you for your purchase!");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
+	}
+	@After
+	public void attachImgToReport(Scenario scenario) {
+		TakesScreenshot scr=(TakesScreenshot)driver;
+		byte[] img=scr.getScreenshotAs(OutputType.BYTES);
+		scenario.attach(img, "image/png", "imageOne");
+		
 	}
 	@AfterAll
 	public static void finish() {
