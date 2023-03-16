@@ -87,6 +87,7 @@ public class ProductStorestepdef {
 		Assert.assertTrue(items.size()!=0);
 		rate=driver.findElement(By.id("totalp"));
 		beforePrice=rate.getText();
+		System.out.println(beforePrice);
 	}
 	@Then("Delete an item from cart")
 	public void delete_an_item_from_cart() throws InterruptedException {
@@ -94,6 +95,7 @@ public class ProductStorestepdef {
 		Thread.sleep(2000);
 		rate=driver.findElement(By.id("totalp"));
 		afterPrice=rate.getText();
+		System.out.println(afterPrice);
 		Assert.assertNotEquals(beforePrice, afterPrice);
 	}
 	@When("Items Should be available in Cart")
