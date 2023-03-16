@@ -92,7 +92,7 @@ public class ProductStorestepdef {
 	@Then("Delete an item from cart")
 	public void delete_an_item_from_cart() throws InterruptedException {
 		driver.findElement(By.xpath("(//td[4]//a)[1]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		rate=driver.findElement(By.id("totalp"));
 		afterPrice=rate.getText();
 		System.out.println(afterPrice);
