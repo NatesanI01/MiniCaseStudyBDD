@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="125230" started-at="2023-03-15T14:14:53 IST" finished-at="2023-03-15T14:16:58 IST">
+  <suite name="ProductStoreSuite" duration-ms="158717" started-at="2023-03-27T10:27:39 IST" finished-at="2023-03-27T10:30:18 IST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="125230" started-at="2023-03-15T14:14:53 IST" finished-at="2023-03-15T14:16:58 IST">
+    <test name="ProductStorePageTest" duration-ms="158717" started-at="2023-03-27T10:27:39 IST" finished-at="2023-03-27T10:30:18 IST">
       <class name="runner.ProductStorePageRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="setUpClass" is-config="true" duration-ms="59576" started-at="2023-03-15T14:14:53 IST" finished-at="2023-03-15T14:15:53 IST">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="setUpClass" is-config="true" duration-ms="13672" started-at="2023-03-27T10:27:39 IST" finished-at="2023-03-27T10:27:53 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3a2d3909]]>
+                <![CDATA[org.testng.TestRunner@c29fe36]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="7390" started-at="2023-03-15T14:15:53 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-15T14:16:00 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="16048" started-at="2023-03-27T10:27:53 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-27T10:28:09 IST">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="13635" started-at="2023-03-15T14:16:00 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-15T14:16:14 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="21925" started-at="2023-03-27T10:28:09 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-27T10:28:31 IST">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="17312" started-at="2023-03-15T14:16:14 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-15T14:16:31 IST">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="20955" started-at="2023-03-27T10:28:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-27T10:28:52 IST">
           <params>
             <param index="0">
               <value>
@@ -66,10 +66,25 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at stepDefinition.ProductStorestepdef.items_must_be_added_to_cart(ProductStorestepdef.java:86)
+at ✽.Items must be added to cart(file:///E:/workspace/SDETTrainingWS/miniCaseStudyBDD/src/test/resources/features/ProductStorePage.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="2590" started-at="2023-03-15T14:16:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-15T14:16:34 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="3818" started-at="2023-03-27T10:28:52 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-27T10:28:55 IST">
           <params>
             <param index="0">
               <value>
@@ -85,7 +100,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="4213" started-at="2023-03-15T14:16:34 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-15T14:16:38 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="runScenario" duration-ms="11505" started-at="2023-03-27T10:28:55 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-27T10:29:07 IST">
           <params>
             <param index="0">
               <value>
@@ -101,11 +116,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="tearDownClass" is-config="true" duration-ms="20437" started-at="2023-03-15T14:16:38 IST" finished-at="2023-03-15T14:16:58 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.ProductStorePageRunner@8b87145]" name="tearDownClass" is-config="true" duration-ms="70740" started-at="2023-03-27T10:29:07 IST" finished-at="2023-03-27T10:30:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- runner.ProductStorePageRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- ProductStorePageTest -->
+  </suite> <!-- ProductStoreSuite -->
 </testng-results>
